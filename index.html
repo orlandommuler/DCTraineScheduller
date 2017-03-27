@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+<head>
+	<meta charset="utf-8">
+	<title>DC TRAINE SCHEDULE APP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/resets.css">
+	<!-- google api -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+	<!-- cdn for firebase database -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+	<!-- cdn for moment.js where it will calculate traine time -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+	<!--jumbotron -->
+	<div class="jumbotron">
+		<h1 class="text-center">DC Traine Schedule</h1>		
+	</div>
+	<div class="container container">
+		<div class="row">
+			<div class="col-sm-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Upcoming Traine Schedule</h3>
+					</div>
+					<!-- I will be creating a table which will be used as an input from the user -->
+					<div class="panel-body">
+						<!-- create a table -->
+						<table class="traine-schedule">
+							<tr> <!-- opening for table row -->
+								<th class="col-xs-2">Train Name</th>
+								<th class="col-xs-2">Departing From</th>
+								<th class="col-xs-2">Destination</th>
+								<th class="col-xs-2">Frequency (min)</th>
+								<th class="col-xs-2">Next Arrival</th>
+								<th class="col-xs-2">Minutes Away</th>
+
+							</tr> <!-- closing table row -->
+						</table>
+					</div>
+				</div>				
+			</div>
+		</div>		
+	</div><!-- close the container div -->
+	<div class="container-input">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Add Train</h3>
+						<form role="form">
+							<div class="form-group">
+								<label for="text">Train Name</label>
+								<input type="text" class="form-control" id="name-input">
+							</div>
+							<div class="form-group">
+								<label for="text">Departing From</label>
+								<input type="text" class="form-control" id="departure-input">
+							</div>
+							<div class="form-group">
+								<label for="text">Destination</label>
+								<input type="text" class="form-control" id="destination-input">
+							</div>
+							<div class="form-group">
+								<label for="text">Frequency (min)</label>
+								<input type="text" class="form-control" id="frequency-input">
+							</div>
+							<div class="form-group">
+								<label for="text">Next Arrival</label>
+								<input type="text" class="form-control" id="arrival-input">
+							</div>
+							<div class="form-group">
+								<label for="text">Minutes Away</label>
+								<input type="text" class="form-control" id="frequency-input">
+							</div>
+							<button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+								
+						</form>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>
